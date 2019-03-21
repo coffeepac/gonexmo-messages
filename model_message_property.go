@@ -11,8 +11,8 @@
 package openapi
 
 type MessageProperty struct {
-	Content MessagePropertyContent `json:"content"`
-	ViberServiceMsg MessagePropertyViberServiceMsg `json:"viber_service_msg,omitempty"`
-	Messenger MessagePropertyMessenger `json:"messenger,omitempty"`
-	Whatsapp MessagePropertyWhatsapp `json:"whatsapp,omitempty"`
+	Content         MessagePropertyContent          `json:"content"`
+	ViberServiceMsg *MessagePropertyViberServiceMsg `json:"viber_service_msg,omitempty"`
+	Messenger       *MessagePropertyMessenger       `json:"messenger,omitempty"`
+	Whatsapp        *MessagePropertyWhatsapp        `json:"whatsapp,omitempty"`
 }
