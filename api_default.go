@@ -42,7 +42,7 @@ func (a *DefaultApiService) NewMessage(ctx context.Context, newMessage NewMessag
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/messages"
+	localVarPath := a.client.cfg.BasePath + "/messages/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

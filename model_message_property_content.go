@@ -11,13 +11,13 @@
 package openapi
 
 type MessagePropertyContent struct {
-	// The type of message that you are sending.  **Messenger**: supports all types.  **Viber Service Messages**: supports `image` and `text` and `custom`.  **WhatsApp**: supports `template` and `text`.  **SMS**: supports `text`.  **MMS**: supports `image`. 
+	// The type of message that you are sending.  **Messenger**: supports all types.  **Viber Service Messages**: supports `image` and `text` and `custom`.  **WhatsApp**: supports `template` and `text`.  **SMS**: supports `text`.  **MMS**: supports `image`.
 	Type string `json:"type,omitempty"`
-	// The text of the message.  **Messenger**: Is limited to 640 characters  **SMS** or **Viber**: Is 1000 characters  **WhatsApp**: is 4096 characters 
-	Text string `json:"text,omitempty"`
-	Image ImageProperty `json:"image,omitempty"`
-	Audio AudioProperty `json:"audio,omitempty"`
-	Video VideoProperty `json:"video,omitempty"`
-	File FileProperty `json:"file,omitempty"`
-	Template TemplateProperty `json:"template,omitempty"`
+	// The text of the message.  **Messenger**: Is limited to 640 characters  **SMS** or **Viber**: Is 1000 characters  **WhatsApp**: is 4096 characters
+	Text     string            `json:"text,omitempty"`
+	Image    *ImageProperty    `json:"image,omitempty"`
+	Audio    *AudioProperty    `json:"audio,omitempty"`
+	Video    *VideoProperty    `json:"video,omitempty"`
+	File     *FileProperty     `json:"file,omitempty"`
+	Template *TemplateProperty `json:"template,omitempty"`
 }
